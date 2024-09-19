@@ -23,7 +23,7 @@ services:
 - name: postgres
   disabled: true
   title: PostgreSQL
-  required: true  
+  required: false
   service: postgres
   volumes:
   - name: data
