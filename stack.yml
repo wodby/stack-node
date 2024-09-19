@@ -7,9 +7,6 @@ services:
   title: Node.js
   service: node
   required: true
-  volumes:
-  - name: storage
-    size: 20
   links:
   - name: db
     service: postgres
