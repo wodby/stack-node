@@ -26,14 +26,6 @@ services:
   - name: data
     size: 10   
 
-- name: files-nfs
-  disabled: true
-  title: Files NFS storage
-  service: nfs-provisioner
-  volumes:
-  - name: data
-    size: 25
-
 - name: valkey
   disabled: true
   title: Valkey
