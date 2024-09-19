@@ -21,6 +21,7 @@ services:
     service: mailpit
 
 - name: postgres
+  disabled: true
   title: PostgreSQL
   required: true  
   service: postgres
@@ -29,6 +30,7 @@ services:
     size: 10   
 
 - name: files-nfs
+  disabled: true
   title: Files NFS storage
   service: nfs-provisioner
   volumes:
@@ -36,11 +38,12 @@ services:
     size: 25
 
 - name: valkey
-  required: false
+  disabled: true
   title: Valkey
   service: valkey
 
 - name: mailpit
+  disabled: true
   title: Mailpit
   service: mailpit
 
