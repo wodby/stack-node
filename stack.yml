@@ -1,0 +1,60 @@
+name: node
+icon: node
+title: Node.js
+
+services:
+- name: node
+  title: Node.js
+  service: node
+  required: true
+  volumes:
+  - name: storage
+    size: 20
+  links:
+  - name: db
+    service: postgres
+  - name: redis
+    service: valkey
+  - name: storage
+    service: files-nfs
+  - name: sendmail
+    service: mailpit
+
+- name: postgres
+  title: PostgreSQL
+  required: true  
+  service: postgres
+  volumes:
+  - name: data
+    size: 10   
+
+- name: files-nfs
+  title: Files NFS storage
+  service: nfs-provisioner
+  volumes:
+  - name: data
+    size: 25
+
+- name: valkey
+  required: false
+  title: Valkey
+  service: valkey
+
+- name: mailpit
+  title: Mailpit
+  service: mailpit
+
+- name: opensmtpd
+  disabled: true
+  title: OpenSMTPD
+  service: opensmtpd
+
+- name: gotenberg
+  required: false
+  title: Gotenberg
+  service: gotenberg
+
+- name: cloud-postgres 
+  title: Cloud PostgreSQL
+  service: cloud-postgres
+  disabled: true
