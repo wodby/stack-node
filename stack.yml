@@ -54,6 +54,7 @@ services:
 
 - name: gotenberg
   required: false
+  disabled: true
   title: Gotenberg
   service: gotenberg
 
