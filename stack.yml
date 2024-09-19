@@ -12,8 +12,6 @@ services:
     service: postgres
   - name: redis
     service: valkey
-  - name: storage
-    service: files-nfs
   - name: sendmail
     service: mailpit
 
