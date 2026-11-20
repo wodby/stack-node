@@ -2,6 +2,7 @@ name: node
 icon: node
 docs: https://wodby.com/docs/2.0/stacks/catalog/node/
 title: Node.js
+category: runtimes
 
 services:
 - name: node
